@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --dark-bg-color: hsl(207, 26%, 17%);
+        --article-color: hsl(209, 23%, 22%);
+        --text-color: hsl(0, 0%, 100%);
+        --light-mode-text: hsl(200, 15%, 8%);
+        --light-mode-input: hsl(0, 0%, 52%);
+        --light-mode-background: hsl(0, 0%, 98%);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: hsl(207, 26%, 17%);
+        color: #fff;
+        width: 100vw;
+      }
+
+      button {
+        margin-top: 3rem;
+        margin-left: 15rem;
+        padding: 13px 25px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        color: #fff;
+        background-color: hsl(209, 23%, 22%);
+      }
+
+      .container {
+        width: 80%;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+      .container img {
+        width: 50%;
+        height: 50%;
+        margin: auto 0;
+      }
+
+      .container .container-right {
+        -left: 5rem;
+        margin: auto 0;
+        height: 70%;
+      }
+      .container-right {
+        padding-left: 3rem;
+      }
+
+      .container-right .information {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 1rem 1rem;
+      }
+
+      .information-column {
+        display: flex;
+      }
+
+      h3 {
+        margin: 0.6rem 0;
+        font-size: 30px;
+      }
+
+      .information p {
+        margin-right: 2rem;
+        margin-top: 0.8rem;
+        font-size: 20px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--text-color);
+        background-color: var(--article-color);
+        box-shadow: 0 5px 10px hsla(200, 15%, 8%, 0.1);
+        padding: 10px 50px;
+        width: 100%;
+      }
+
+      header a,
+      button a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      header .content-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="content-header">
+        <h1><a href="index.html">Where in the world ?</a></h1>
+        <p>Dark Mode</p>
+      </div>
+    </header>
+    <button id="back"><a href="./index.html">Back</a></button>
+    <div class="container">
+      <img id="img-country" src="" alt="germany logo" />
+      <div class="container-right">
+        <div class="information">
+          <h3 id="title">Germany</h3>
+          <div class="information-column">
+            <div>
+              <p id="native-name"></p>
+              <p id="population"></p>
+              <p id="region"></p>
+              <p id="subregion"></p>
+            </div>
+            <div>
+              <p id="capital"></p>
+              <p id="top-level-domain"></p>
+              <p id="currencies"></p>
+              <p id="languages"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="../src/country.js"></script>
+  </body>
+</html>
