@@ -24,7 +24,7 @@ const create_Li = (element) => {
   var li = document.createElement("li");
   getAllCompenentOfLi(li, element);
   li.onclick = () => {
-    window.location = `/public/country.html?name=${element.name.common}`;
+    window.location = `./country.html?name=${element.name.common}`;
   };
   return li;
 };
