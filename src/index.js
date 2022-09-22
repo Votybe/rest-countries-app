@@ -19,7 +19,7 @@ const appendToDOM = (countries) => {
     ul.appendChild(create_Li(element));
   }
 };
-
+console.log("salut");
 const create_Li = (element) => {
   var li = document.createElement("li");
   getAllCompenentOfLi(li, element);
